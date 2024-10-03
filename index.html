@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcode Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Générateur de Code-barres</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h1>Barcode Generator</h1>
-        <label for="text-input">Enter text:</label>
-        <input type="text" id="text-input" placeholder="Enter text">
-        <button id="generate-btn">Generate Barcode</button>
-        <label for="barcode">Generated Barcode:</label>
-        <canvas id="barcode"></canvas>
-        <button id="copy-btn">Copy to Clipboard</button>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+        <h1 class="text-2xl font-bold mb-4">Générateur de Code-barres</h1>
+        <label for="text-input" class="block mb-2">Entrez le texte:</label>
+        <input type="text" id="text-input" placeholder="Entrez le texte" class="w-full p-2 mb-4 border border-gray-300 rounded" maxlength="8">
+        <button id="generate-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Générer le Code-barres</button>
+        <label for="barcode" class="block mt-4 mb-2">Code-barres généré:</label>
+        <canvas id="barcode" class="border border-gray-300 rounded mx-auto"></canvas>
     </div>
     <script src="script.js"></script>
 </body>

@@ -8,7 +8,6 @@ This is a simple barcode generator application that allows you to generate barco
 2. Enter the text you want to convert into a barcode in the text input field.
 3. Click the "Generate Barcode" button to generate the barcode.
 4. The barcode will be displayed on the canvas below the text input field.
-5. Click the "Copy to Clipboard" button to copy the barcode image to your clipboard.
 
 ## Dependencies
 

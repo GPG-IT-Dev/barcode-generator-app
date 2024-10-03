@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         generateBtn.addEventListener('click', function() {
             const textInput = document.getElementById('text-input').value;
             if (textInput.trim() === "") {
-                alert("Please enter text to generate a barcode.");
+                alert("Veuillez entrer du texte pour générer un code-barres.");
                 return;
             }
             const canvas = document.getElementById('barcode');
@@ -18,17 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 format: 'CODE128',
                 displayValue: true
             });
-        });
 
-        // Add event listener to the copy button
-        const copyBtn = document.getElementById('copy-btn');
-        copyBtn.addEventListener('click', function() {
-            const canvas = document.getElementById('barcode');
+            // Copy the barcode to the clipboard
             canvas.toBlob(function(blob) {
                 const item = new ClipboardItem({ 'image/png': blob });
-                navigator.clipboard.write([item]).then(function() {
-                    alert("Barcode copied to clipboard successfully!");
-                });
+                navigator.clipboard.write([item]);
             });
         });
     };
